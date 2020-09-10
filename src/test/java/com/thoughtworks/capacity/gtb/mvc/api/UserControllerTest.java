@@ -30,7 +30,7 @@ public class UserControllerTest {
     void should_register() throws Exception {
 
         User user = User.builder()
-                .userName("Tom")
+                .username("Tom")
                 .password("12345")
                 .email("tom@qq.com")
                 .build();

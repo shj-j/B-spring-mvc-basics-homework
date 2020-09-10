@@ -12,10 +12,10 @@ public class UserRepository {
 
     public void save(User user){
 
-        if (userMap.containsKey(user.getUserName())){
-            throw new UserExistException();
+        if (userMap.containsKey(user.getUsername())){
+            throw new UserExistException("用户已存在");
         }else{
-            userMap.put(user.getUserName(), user);
+            userMap.put(user.getUsername(), user);
         }
 
     }
