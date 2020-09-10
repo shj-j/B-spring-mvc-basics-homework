@@ -15,12 +15,13 @@ public class UserRepository {
         if (userMap.containsKey(user.getUsername())){
             throw new UserExistException("用户已存在");
         }else{
+            user.setId(userMap.size()+1);
             userMap.put(user.getUsername(), user);
         }
 
     }
 
-    public User findByUserName(String userName) {
+    public User findUserByUserName(String userName) {
         return userMap.get(userName);
     }
 

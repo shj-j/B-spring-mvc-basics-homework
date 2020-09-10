@@ -1,9 +1,6 @@
 package com.thoughtworks.capacity.gtb.mvc.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -15,6 +12,8 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @Builder
 public class User {
+
+    private Integer id;
 
     @NotBlank(message = "用户名不为空")
     @Pattern(regexp = "^[a-zA-Z0-9_]{3,10}$", message = "用户名不合法")
